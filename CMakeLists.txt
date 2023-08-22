@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.10)
 project(ORB_SLAM2)
 
 SET(CMAKE_EXPORT_COMPILE_COMMANDS "ON")
@@ -46,11 +46,15 @@ set(OpenCV_DIR "/usr/share/OpenCV")
    message(STATUS "OpenCV Libraries: ${OpenCV_LIBRARIES}")
 endif()
 
-find_package(Eigen3 3.1.0 REQUIRED)
+# find_package(Eigen3 3.1.0 REQUIRED)
+set(EIGEN_INCLUDE_DIR "/home/slam007/app/eigen-3.1.0")
+include_directories(${EIGEN_INCLUDE_DIR}) 
+message(STATUS "Eigen Find Version: ${EIGEN_INCLUDE_DIR}")
 find_package(Pangolin REQUIRED)
 # adding for point cloud viewer and mapper
-set(PCL_DIR "/usr/share/pcl-1.7")
-find_package( PCL 1.7.2 EXACT REQUIRED )
+# set(PCL_DIR "/usr/share/pcl-1.7")
+# find_package( PCL 1.7.2 EXACT REQUIRED )
+find_package( PCL 1.8 REQUIRED )
 
 include_directories(
 ${PROJECT_SOURCE_DIR}

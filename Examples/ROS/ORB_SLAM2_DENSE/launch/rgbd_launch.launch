@@ -1,9 +1,9 @@
 <launch>
     <!-- dataset path args -->
     <arg name="voc_path" doc="Path of DBoW dictionary"
-         default="/home/yonghui/catkin_ws/src/ORB-SLAM2_DENSE/Vocabulary/ORBvoc.bin" />
+         default="/home/slam007/Dev/orb2_dense/src/ORB-SLAM2_DENSE/Vocabulary/ORBvoc.bin" />
     <arg name="setting_path" doc="Path of SLAM and camera config .yaml file"
-         default="/home/yonghui/catkin_ws/src/ORB-SLAM2_DENSE/Examples/ROS/ORB_SLAM2_DENSE/params/TUM2.yaml" />
+         default="/home/slam007/Dev/orb2_dense/src/ORB-SLAM2_DENSE/Examples/ROS/ORB_SLAM2_DENSE/params/TUM2.yaml" />
     <!-- orb_slam2_dense parameters args -->
     <arg name="use_odom_pub" default="true"/>
     <arg name="use_rviz" default="true" />
